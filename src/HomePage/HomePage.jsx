@@ -65,6 +65,7 @@ class HomePage extends React.Component {
         };
         this.handleMenu = this.handleMenu.bind(this);
         this.handleClose = this.handleClose.bind(this);
+        this.handleLogout = this.handleLogout.bind(this);
     }
 
     componentDidMount() {
@@ -78,6 +79,10 @@ class HomePage extends React.Component {
     handleClose(){
         this.setState({ anchorEl: null });
     };
+
+    handleLogout(){
+        this.props.dispatch(userActions.logout());
+    }
 
     render() {
         const { anchorEl } = this.state;
@@ -116,7 +121,7 @@ class HomePage extends React.Component {
                                 onClose={this.handleClose}
                                 >
                                 <MenuItem onClick={this.handleClose}>Profile</MenuItem>
-                                <MenuItem onClick={this.handleClose}>My account</MenuItem>
+                                <MenuItem onClick={this.handleLogout}>Logout</MenuItem>
                                 </Menu>
                             </div>
                             )}
