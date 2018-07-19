@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 
-import { userActions, alertActions } from '../_actions';
+import { userActions, alertActions } from '../../_actions';
 import { withStyles } from "@material-ui/core/styles";
 import Card from "@material-ui/core/Card";
 import TextField from "@material-ui/core/TextField";

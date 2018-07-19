@@ -5,10 +5,10 @@ import NewMuiThemeProvider from "@material-ui/core/styles/MuiThemeProvider";
 import createMuiTheme from "@material-ui/core/styles/createMuiTheme";
 import { history } from '../_helpers';
 import { alertActions } from '../_actions';
-import { PrivateRoute } from '../_components';
-import { HomePage } from '../HomePage';
-import { LoginPage } from '../LoginPage';
-import { RegisterPage } from '../RegisterPage';
+import { PrivateRoute } from '../router';
+import { HomePage } from '../container/HomePage';
+import { LoginPage } from '../container/LoginPage';
+import { RegisterPage } from '../container/RegisterPage';
 import Snackbar  from '@material-ui/core/Snackbar';
 import SnackbarContent  from '@material-ui/core/SnackbarContent';
 import IconButton from '@material-ui/core/IconButton';
@@ -40,6 +40,7 @@ const theme = createMuiTheme({
         default: "#01579b",
         white: "#ffffff",
         drawer: "#212121",
+        content: "#ECEFF1",
       }
     }
 }) 
